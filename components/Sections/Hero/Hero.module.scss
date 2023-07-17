@@ -1,0 +1,19 @@
+.Hero{
+  padding:128px 0 152px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:24px;
+  background: white;
+  img{
+    object-fit: cover;
+  }
+h1{
+  color: #231E1E;
+  font-family: Inter;
+  font-size: 48px;
+  line-height: 64px;
+  width: 516px;
+  text-align: left;
+}
+}

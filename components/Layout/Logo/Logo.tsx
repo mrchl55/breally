@@ -6,7 +6,7 @@ type Props = {
 }
 
 const Logo = (props:Props) => {
-    return  <Image src={logoImg} alt='logo' width={64} height={32}/>
+    return  <Image src={logoImg} alt='logo' width={89} height={32}/>
 
 }
 

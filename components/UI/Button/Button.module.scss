@@ -1,0 +1,16 @@
+.Button{
+  background: #DAC2F2;
+  border:none;
+  border-radius: 24px;
+  width: 192px;
+  height: 48px;
+  color: #231E1E;
+  font-family: Inter;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  font-weight: 400;
+  &:hover{
+    cursor: pointer;
+  }
+}

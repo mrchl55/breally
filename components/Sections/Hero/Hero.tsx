@@ -1,6 +1,6 @@
 import {useState} from "react";
 import Image from "next/image";
-
+import classes from "./Hero.module.scss";
 type Props = {
     img: string,
     text: string,
@@ -12,7 +12,7 @@ type Props = {
 const Hero = (props: Props) => {
     const {img, text, imgWidth, imgHeight, alt} = props;
     return (
-        <section>
+        <section className={classes.Hero}>
             <div>
                 <h1>
                     {text}

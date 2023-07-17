@@ -29,8 +29,8 @@ export default function Home(props) {
 
     return (
         <>
-            <Hero img={heroProps.img} text={heroProps.text} alt={heroProps.text} imgWidth={200} imgHeight={200}/>
-            <Testimonial author={testimonialProps.author} text={testimonialProps.text} />
+            {heroProps ? <Hero img={heroProps.img} text={heroProps.text} alt={heroProps.text} imgWidth={516} imgHeight={384}/> : ''}
+            {testimonialProps ? <Testimonial author={testimonialProps.author} text={testimonialProps.text}/> : ''}
             <Newsletter />
         </>
     )

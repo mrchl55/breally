@@ -1,0 +1,39 @@
+.Testimonial {
+  padding: 128px 0;
+  background: #231E1E;
+
+  .Quote {
+    margin-bottom: 68px;
+
+    img {
+      object-fit: contain;
+    }
+  }
+
+  .Content {
+    padding-right: 108px;
+    margin-bottom: 96px;
+
+    h3 {
+
+      color: #F1F0F0;
+      font-family: Inter;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 40px;
+      text-align: left;
+    }
+  }
+
+  .Author {
+    h3 {
+      color: #989898;
+      font-family: Inter;
+      font-size: 24px;
+      line-height: 29px;
+      text-align: left;
+      font-weight: 400;
+    }
+
+  }
+}

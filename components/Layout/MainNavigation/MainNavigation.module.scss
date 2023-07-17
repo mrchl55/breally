@@ -1,0 +1,36 @@
+.MainNav{
+  display: flex;
+  justify-content: space-between;
+  padding: 36px 64px;
+  border-bottom: 1px solid #F1F0F0;
+  background: white;
+.Logo{
+  margin-right: 97px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+  ul{
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 48px;
+    li{
+      a{
+        color: #231E1E;
+        font-family: Inter;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: left;
+      }
+    }
+  }
+  nav{
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

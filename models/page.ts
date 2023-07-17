@@ -1,4 +1,4 @@
-export type Page = {
+export type PageData = {
     id: string,
     url: string,
 }
@@ -8,6 +8,6 @@ export type Section = {
     type?: string
     author?: string
 }
-export type PageProps = Page & {
+export type PageProps = PageData & {
     sections: Section[]
 }

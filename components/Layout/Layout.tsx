@@ -1,6 +1,7 @@
 import {ReactNode} from "react";
 import MainNavigation from "@/components/Layout/MainNavigation/MainNavigation";
-
+import classes from './Layout.module.scss'
+import MainWrapper from "@/components/Layout/MainWrapper/MainWrapper";
 type Props = {
     children?: ReactNode,
 
@@ -9,7 +10,7 @@ type Props = {
 const Layout = (props: Props) => {
     return <>
         <MainNavigation/>
-        <main>{props.children}</main>
+        <MainWrapper>{props.children}</MainWrapper>
     </>
 }
 

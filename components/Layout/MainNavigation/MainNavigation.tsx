@@ -4,7 +4,7 @@ import useSWR from "swr";
 import {getData} from "@/lib/helpers";
 import Button from "@/components/UI/Button/Button";
 import {PageData} from "@/models/page";
-
+import classes from './MainNavigation.module.scss'
 type NavItem = PageData
 
 type Props = {
@@ -17,8 +17,8 @@ const MainNavigation = (props: Props) => {
     if (isLoading || !navItems?.length) {
         return <></>
     }
-    return <header>
-        <Link href='/'>
+    return <header className={classes.MainNav}>
+        <Link href='/' className={classes.Logo}>
             <Logo/>
         </Link>
         {navItems ? <nav>
