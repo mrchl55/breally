@@ -10,7 +10,7 @@ type Props = {
 };
 
 const Hero = (props: Props) => {
-    const {img, text, imgWidth, imgHeight} = props;
+    const {img, text, imgWidth, imgHeight, alt} = props;
     return (
         <section>
             <div>
@@ -19,7 +19,7 @@ const Hero = (props: Props) => {
                 </h1>
             </div>
             <div>
-                <Image src={img} alt={text} width={imgWidth} height={imgHeight}/>
+                <Image src={img} alt={alt ?? text} width={imgWidth} height={imgHeight}/>
             </div>
         </section>
 

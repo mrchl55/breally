@@ -6,10 +6,9 @@ type Props = {
 
 }
 
-const Layout = (props:Props) => {
-    console.log(props)
+const Layout = (props: Props) => {
     return <>
-    <MainNavigation />
+        <MainNavigation/>
         <main>{props.children}</main>
     </>
 }

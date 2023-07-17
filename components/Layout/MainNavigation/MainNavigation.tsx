@@ -3,12 +3,9 @@ import Link from "next/link";
 import useSWR from "swr";
 import {getData} from "@/lib/helpers";
 import Button from "@/components/UI/Button/Button";
+import {PageData} from "@/models/page";
 
-type NavItem = {
-    id: string,
-    title: string,
-    url: string,
-}
+type NavItem = PageData
 
 type Props = {
     navItems: NavItem[]
