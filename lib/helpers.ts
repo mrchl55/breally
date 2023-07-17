@@ -1,5 +1,5 @@
-export async function getData(url:string) {
-        const res = await fetch(url, {
+export async function getData(url: string) {
+    const res = await fetch(url, {
         headers: new Headers({
             "Authorization": `Basic ${btoa('adchitects:jsrulezzz')}`
         }),
@@ -8,3 +8,12 @@ export async function getData(url:string) {
     return data
 }
 
+export async function getAllPages() {
+    const data = await getData('https://adchitects-cms.herokuapp.com/pages')
+    return data
+}
+
+export async function getPageById(id: string) {
+    const data = await getData(`https://adchitects-cms.herokuapp.com/page/${id}`)
+    return data
+}
