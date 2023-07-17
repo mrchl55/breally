@@ -4,6 +4,7 @@ import Image from "next/image";
 type Props = {
     img: string,
     text: string,
+    alt?: string,
     imgWidth: number,
     imgHeight: number,
 };
