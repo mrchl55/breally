@@ -4,8 +4,8 @@ type Props = React.ButtonHTMLAttributes<HTMLButtonElement> &  {
 }
 
 const Button: React.FC<Props> = (props) => {
-    const {type, href, title, onClick} = props
-    return <button className={classes.Button} type={type} href={href} onClick={onClick}>
+    const {type, href, title, onClick, disabled} = props
+    return <button className={classes.Button} type={type} href={href} onClick={onClick} disabled={disabled}>
         {title}
     </button>
 }
