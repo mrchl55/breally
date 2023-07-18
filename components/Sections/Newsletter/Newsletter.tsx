@@ -4,13 +4,14 @@ import {useState} from "react";
 
 const Newsletter = () => {
     const [message, setMessage] = useState('');
+    const [error, setError] = useState(false);
 
     return <section className={classes.Newsletter}>
-        <h2>
+        <h2 className={classes.Heading}>
             Sign up for Newsletter
         </h2>
-        <NewsletterForm setMessage={setMessage}/>
-        {message ? <p>{message}</p> : ''}
+        <NewsletterForm setMessage={setMessage} setError={setError}/>
+        {message ? <p className={`${classes.Message} ${error ? classes.Error : classes.Success}`}>{message}</p> : ''}
     </section>
 };
 

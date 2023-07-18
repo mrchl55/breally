@@ -1,25 +1,41 @@
-.MainNav{
+@import 'styles/media.scss';
+
+.MainNav {
   display: flex;
-  justify-content: space-between;
-  padding: 36px 64px;
-  border-bottom: 1px solid #F1F0F0;
-  background: white;
-.Logo{
-  margin-right: 97px;
-  display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-}
-  ul{
+  align-items: center;
+  padding: 36px 64px;
+  border-bottom: 1px solid $color-secondary;
+  background: $color-white;
+  gap: 15px;
+  @include min-respond(desktop) {
+    flex-direction: row;
+    justify-content: space-between;
+
+  }
+
+  .Logo {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include min-respond(desktop) {
+      margin-right: 97px;
+    }
+  }
+
+  ul {
     padding: 0;
     list-style: none;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 48px;
-    li{
-      a{
-        color: #231E1E;
+
+    li {
+      a {
+        color: $color-primary;
         font-family: Inter;
         font-size: 16px;
         line-height: 24px;
@@ -27,10 +43,15 @@
       }
     }
   }
-  nav{
-    margin-right: auto;
+
+  nav {
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    @include min-respond(desktop) {
+      margin-right: auto;
+      margin-left: 0;
+    }
   }
 }

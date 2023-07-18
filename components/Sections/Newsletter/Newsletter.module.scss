@@ -1,19 +1,44 @@
+@import 'styles/media.scss';
+
 .Newsletter {
-  padding-top: 128px;
-  padding-bottom: 128px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @include min-respond(desktop) {
+    padding-top: 128px;
+    padding-bottom: 128px;
+  }
 
-  h2 {
-    color: #231E1E;
+  .Heading {
+    color: $color-primary;
     font-family: Inter;
     font-size: 40px;
     line-height: 56px;
-    width: 624px;
     text-align: center;
     margin-bottom: 64px;
     font-weight: 500;
+
+  }
+
+  .Message {
+
+    font-family: Inter;
+    font-size: 14px;
+    line-height: 22px;
+    width: 624px;
+    text-align: center;
+    font-weight: 400;
+
+    &.Success {
+      color: $color-success;
+    }
+
+    &.Error {
+      color: $color-error;
+    }
   }
 }

@@ -1,8 +1,19 @@
+@import 'styles/media.scss';
+
 .MainWrapper {
   padding: 0;
 
+  margin: 0 auto;
+
   section {
-    padding-left: 172px;
-    padding-right: 172px;
+
+    padding-left: 24px;
+    padding-right: 24px;
+
+    @include min-respond(desktop) {
+      padding-left: 172px;
+      padding-right: 172px;
+
+    }
   }
 }

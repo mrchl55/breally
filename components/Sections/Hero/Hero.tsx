@@ -19,7 +19,7 @@ const Hero = (props: Props) => {
                 </h1>
             </div>
             <div>
-                <Image src={img} alt={alt ?? text} width={imgWidth} height={imgHeight}/>
+                <Image src={img} alt={alt ?? text} width={imgWidth} height={imgHeight} priority={true}/>
             </div>
         </section>
 

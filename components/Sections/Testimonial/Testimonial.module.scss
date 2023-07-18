@@ -1,6 +1,22 @@
+@import 'styles/media.scss';
+
 .Testimonial {
-  padding: 128px 0;
-  background: #231E1E;
+  position: relative;
+  padding: 40px 0;
+  @include min-respond(desktop) {
+    padding: 128px 0;
+  }
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: $color-primary;
+    width: 100vw;
+    height: 100%;
+    content: '';
+    z-index: -1;
+  }
 
   .Quote {
     margin-bottom: 68px;
@@ -11,12 +27,15 @@
   }
 
   .Content {
-    padding-right: 108px;
-    margin-bottom: 96px;
 
+    margin-bottom: 46px;
+    @include min-respond(desktop) {
+      padding-right: 108px;
+      margin-bottom: 96px;
+    }
     h3 {
 
-      color: #F1F0F0;
+      color: $color-secondary;
       font-family: Inter;
       font-weight: 400;
       font-size: 24px;
@@ -27,7 +46,7 @@
 
   .Author {
     h3 {
-      color: #989898;
+      color: $color-grey;
       font-family: Inter;
       font-size: 24px;
       line-height: 29px;

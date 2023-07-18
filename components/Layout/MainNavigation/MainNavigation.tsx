@@ -5,18 +5,11 @@ import {getData} from "@/lib/helpers";
 import Button from "@/components/UI/Button/Button";
 import {PageData} from "@/models/page";
 import classes from './MainNavigation.module.scss'
+
 type NavItem = PageData
 
-type Props = {
-    navItems: NavItem[]
-}
-
-const MainNavigation = (props: Props) => {
-    const {data: navItems, error, isLoading} = useSWR('https://adchitects-cms.herokuapp.com/pages', getData)
-    console.log(navItems)
-    if (isLoading || !navItems?.length) {
-        return <></>
-    }
+const MainNavigation = () => {
+    const {data: navItems} = useSWR<NavItem[]>('https://adchitects-cms.herokuapp.com/pages', getData)
     return <header className={classes.MainNav}>
         <Link href='/' className={classes.Logo}>
             <Logo/>
@@ -31,7 +24,7 @@ const MainNavigation = (props: Props) => {
             </ul>
         </nav> : ''}
         <div>
-            <Button title='Contact Us'/>
+            <Button>Contact Us</Button>
         </div>
     </header>
 }

@@ -1,8 +1,5 @@
-import Head from 'next/head'
-import Image from 'next/image'
 import {Inter} from 'next/font/google'
-import styles from '@/styles/Home.module.css'
-import type {InferGetStaticPropsType, GetStaticProps} from 'next'
+import type {GetStaticProps} from 'next'
 import Hero from "@/components/Sections/Hero/Hero";
 import {getAllPages, getPageById} from "@/lib/helpers";
 import {PageData} from "@/models/page";
@@ -23,15 +20,15 @@ export const getStaticProps: GetStaticProps<{
 export default function Home(props) {
     const {page} = props
     const {sections} = page
-    console.log(page)
     const heroProps = sections.find(section => section.type === 'hero')
     const testimonialProps = sections.find(section => section.type === 'testimonial')
 
     return (
         <>
-            {heroProps ? <Hero img={heroProps.img} text={heroProps.text} alt={heroProps.text} imgWidth={516} imgHeight={384}/> : ''}
+            {heroProps ? <Hero img={heroProps.img} text={heroProps.text} alt={heroProps.text} imgWidth={516}
+                               imgHeight={384}/> : ''}
             {testimonialProps ? <Testimonial author={testimonialProps.author} text={testimonialProps.text}/> : ''}
-            <Newsletter />
+            <Newsletter/>
         </>
     )
 

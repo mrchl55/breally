@@ -1,18 +1,22 @@
+@import 'styles/media.scss';
+
 .Input {
-  background-color: #F1F0F0;
+  background-color: $color-secondary;
   border-radius: 24px;
   padding-left: 32px;
   padding-right: 32px;
   border: none;
-
   font-family: Inter;
   font-size: 16px;
   line-height: 19px;
   text-align: left;
-  &::placeholder{
-    color: #231E1E;
+  max-width: 70%;
+
+  &::placeholder {
+    color: $color-primary;
   }
-  &:focus{
+
+  &:focus {
     outline: none;
 
   }

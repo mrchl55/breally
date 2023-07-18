@@ -1,0 +1,10 @@
+@import './variables.scss';
+
+
+@mixin min-respond($breakpoint) {
+  @if $breakpoint==desktop {
+    @media only screen and (min-width: $lg + 1px ) {
+      @content
+    };
+  }
+}
