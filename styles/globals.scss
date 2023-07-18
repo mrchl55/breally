@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+@import './media.scss';
 
 
 * {
@@ -12,7 +13,10 @@ body {
     max-width: 100vw;
     overflow-x: hidden;
 }
-
+main, header{
+    max-width: 1400px;
+    margin: 0 auto;
+}
 
 a {
     color: inherit;
