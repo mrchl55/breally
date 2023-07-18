@@ -1,14 +1,23 @@
-import classes from './Button.module.scss'
+import classes from "./Button.module.scss";
 
 type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & {
-    title: string,
-}
+  href?: string;
+};
 
 const Button = (props: Props) => {
-    const {type, href, children, onClick, disabled} = props
-    return <button className={classes.Button} type={type} href={href} onClick={onClick} disabled={disabled}>
+  const { type, children, onClick, disabled, href } = props;
+  return (
+    <a href={href}>
+      <button
+        className={classes.Button}
+        type={type}
+        onClick={onClick}
+        disabled={disabled}
+      >
         {children}
-    </button>
-}
+      </button>
+    </a>
+  );
+};
 
-export default Button
+export default Button;

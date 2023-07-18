@@ -1,13 +1,9 @@
-import {ReactNode} from "react";
 import Image from "next/image";
-import logoImg from '@/public/images/logo.svg'
-type Props = {
+import logoImg from "@/public/images/logo.svg";
 
-}
 
-const Logo = (props:Props) => {
-    return  <Image src={logoImg} alt='logo' width={89} height={32}/>
+const Logo = () => {
+  return <Image src={logoImg} alt="logo" width={89} height={32} />;
+};
 
-}
-
-export default Logo
+export default Logo;

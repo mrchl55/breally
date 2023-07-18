@@ -9,13 +9,17 @@
   gap: 24px;
   background: $color-white;
   padding: 40px 0;
+
   @include min-respond(desktop) {
     padding: 128px 0 152px;
     flex-direction: row;
   }
+
   img {
     object-fit: cover;
     max-width: 100%;
+    width: auto;
+    height: auto;
   }
 
   h1 {
@@ -25,6 +29,7 @@
     line-height: 64px;
     text-align: center;
     font-weight: 500;
+
     @include min-respond(desktop) {
       max-width: 516px;
       text-align: left;
