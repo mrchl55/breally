@@ -1,6 +1,8 @@
 import classes from './Button.module.scss'
 
-type Props = React.ButtonHTMLAttributes<HTMLButtonElement>
+type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & {
+    title: string,
+}
 
 const Button = (props: Props) => {
     const {type, href, children, onClick, disabled} = props
