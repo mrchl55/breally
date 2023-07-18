@@ -12,7 +12,7 @@ export const getStaticProps: GetStaticProps<{
   page: PageData;
 }> = async () => {
   const pages = await getAllPages();
-  const homePage = await pages.find((p) => p.url === "/");
+  const homePage = await pages.find((p: PageData) => p.url === "/");
 
   return { props: { page: await getPageById(homePage.id) } };
 };
